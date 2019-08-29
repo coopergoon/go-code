@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "./demo1"
+import "./demos"
 
 func main()  {
 
@@ -14,7 +14,7 @@ func main()  {
 	fmt.Println("a", c1, c2)
 
 	var a1, b2 float64 = 4, 5
-	c3 := demo1.Demo1(a1, b2)
+	c3 := demos.Demo1(a1, b2)
 	fmt.Println(c3)
 }
 
