@@ -40,11 +40,11 @@ func main()  {
 	//demos.Demo18()
 	//demos.Demo19()
 	//demos.TypeDemo()
-	//demos.InterfaceDemo()
 	//demos.FuncDemo()
 	//demos.Func3()
 	//demos.FuncDemo1()
-	demos.FuncDemo5()
+	//demos.FuncDemo5()
+	demos.InterfaceDemo()
 }
 
 
