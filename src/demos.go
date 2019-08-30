@@ -43,7 +43,8 @@ func main()  {
 	//demos.InterfaceDemo()
 	//demos.FuncDemo()
 	//demos.Func3()
-	demos.FuncDemo1()
+	//demos.FuncDemo1()
+	demos.FuncDemo5()
 }
 
 

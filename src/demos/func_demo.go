@@ -130,12 +130,69 @@ func FuncDemo1()  {
 	p.b1()   // rect 结构体调用 b1方法  值接收器
 
 	p1 := &p // 创建 p结构体的指针 p1
-	p1.b1()   // 使用p1 指针调用值接收器  
+	p1.b1()   // 使用p1 指针调用值接收器
 
 	/*
 	函数的参数是不能接受指针的
 	b1(p1) 所以这样的写法是错误的
 	*/
 
+}
+
+
+
+type per1 struct {
+	name string
+	age int
+}
+
+//函数  接受指针参数
+func mw1(p *per1)  {
+	fmt.Println(p.name)
+	fmt.Println(p.age)
+}
+
+//指针接收器方法
+func (p per1) mw2 ()  {
+	fmt.Println(p.name)
+	fmt.Println("---------")
+	fmt.Println(p.age)
+}
+
+
+
+
+func FuncDemo5()  {
+	p5 := per1{
+		name: "mbmbmbm",
+		age: 13312321,
+	}
+	p6 := &p5  // 创建指针
+	mw1(p6)  // 函数接受指针参数
+
+	//p5结构体调用指针接收器方法
+	p5.mw2()
+
+	p6.mw2()   // 指针调用指针接收器方法
+
+	//不可以使用将值
+	//p6.mw1()  这是错误的
+
+
+	//在非结构体上的方法
+	//这部分没明白咋回事
+
+	num1 := myint(10)
+	num2 := myint(10000000000)
+	num1.p(num2)
+
 
 }
+
+type myint int
+
+func (d myint)p(a myint) {
+	//return a + d
+	fmt.Println("------cc" , a + d)
+}
+
